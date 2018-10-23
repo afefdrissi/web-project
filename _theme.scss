@@ -1,0 +1,25 @@
+$colors :(
+  primary:#f7ac53,
+  //accent:#53f7b8,
+  lighter:#fff,
+  light:#e0e0e0,
+  neutre:#424242,
+  dark:#1f1f1f,
+  darker:#131212
+);
+@function color($color-name){
+  @return map-get($colors,$color-name)
+}
+$fonts:(
+  primary:'open sans',
+  accent:'Merriweather'
+);
+@function font($font-name){
+  @return map-get($fonts,$font-name)
+}
+$images:(
+  home-page:url("assets/butterfly.png")
+);
+@function image($image-url){
+  @return map-get($images,$image-url)
+}

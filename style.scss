@@ -1,0 +1,47 @@
+@import 'theme';
+@import 'importMe';
+@import 'visuals';
+
+*,
+:before,
+:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body{
+@include typography(primary,14pt,_,lighter,_,_,_);
+background-color: color(dark);
+margin:0;
+
+}
+section{
+min-height: 100vh;
+width:100%;
+
+.vertical-line{
+@include line(80px,_,primary);//vertical-line
+margin:auto;
+
+}}
+
+.section-title{
+@include typography(primary,12px,_,primary,_,_,center);
+  }
+#home-page{
+    background-image:image(home-page);
+}
+#home-page,#projects{
+@include flex(_,center,_,center,_);
+
+}
+#projects,#team{
+    background-color: color(darker);
+}
+
+#contact,#team,#services,#testimonials{
+@include flex(column,space-between,center,center,_);
+padding-bottom: 120px;
+
+
+}

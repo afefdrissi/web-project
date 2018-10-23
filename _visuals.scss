@@ -1,0 +1,13 @@
+@mixin line($height,$width,$color){
+//@include line($height,_,$color);//vertical-line
+//@include line(_,$width,$color);//horizontal-line
+    border-right: 1px solid color($color);
+    @if $width==_{
+        height:$height;
+        width: 1px;
+    } 
+    @else { 
+        height: 1px;
+        width: $width;}
+}
+
